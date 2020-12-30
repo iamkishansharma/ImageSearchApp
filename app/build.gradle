@@ -72,6 +72,7 @@ dependencies {
 
     // Paging 3
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+
 }
 
 kapt {
