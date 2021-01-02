@@ -1,5 +1,6 @@
 package com.codinginflow.imagesearchapp.ui.gallery
 
+import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -11,7 +12,7 @@ import com.codinginflow.imagesearchapp.data.UnsplashRepository
 
 class GalleryViewModel @ViewModelInject constructor(
     private val repository: UnsplashRepository,
-    state: SavedStateHandle
+    @Assisted state: SavedStateHandle
 ) : ViewModel() {
 
     private val currentQuery = state.getLiveData(CURRENT_QUERY, DEFAULT_QUERY)
